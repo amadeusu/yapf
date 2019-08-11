@@ -1,0 +1,18 @@
+<?php if ($this->authStatus == 'error') { ?>
+<div class="alert alert-warning">
+    <strong>Warning!</strong> Authorisation Error.
+</div>
+<?php } ?>
+
+<form class="form-signin" role="form" method="post" id="loginForm" action="/login/" data-toggle="validator">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <input type="text" name="login" class="form-control" id="inputLogin" placeholder="Login"
+           value="<?php if (isset($_REQUEST['login'])) { echo $_REQUEST['login']; } ?>"
+           required autofocus>
+    <input type="password" class="form-control" placeholder="Password"
+           name="password" id="inputPassword" required>
+    <label class="checkbox">
+        <input type="checkbox" value="remember-me"> Remember me
+    </label>
+    <button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-log-in"></span> Sign in</button>
+</form>

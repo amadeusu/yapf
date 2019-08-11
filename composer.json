@@ -1,0 +1,16 @@
+{
+  "name": "amadeusu/yapf",
+  "description": "Yet Another PHP Framework",
+  "require": {
+    "psr/log": "~1.0",
+    "illuminate/database": "5.2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "System\\": "system/",
+      "Common\\": "common/",
+      "Frontend\\": "frontend/",
+      "Backend\\": "backend/"
+    }
+  }
+}
